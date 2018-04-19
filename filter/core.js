@@ -17,16 +17,18 @@ function onlyOneWord (array) {
 };
 
 function positiveRowsOnly (array) {
-return array.filter(function(littleArray){
+var positive = [];
+var newArray = [];
+array.filter(function(element){
+      if( element.filter(function(el){
+        if (el < 0) {
+          return -1
+        }
 
-    return littleArray.filter(function (element) {
-      if (element > 0) {
-        return element;
-      }
-
-    })
-  })
-
+  })<0){return}else{
+  newArray.push(element)}
+  });
+return newArray;
 };
 
 function allSameVowels (array) {
